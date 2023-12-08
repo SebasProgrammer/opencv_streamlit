@@ -13,7 +13,7 @@ stop_button_pressed = st.button("Stop")
 
 option = st.selectbox(
         'Selecciona tarea a realizar',
-        ('None', 'Prender cmara', 'Upload photo'))
+        ('None', 'Prender camara', 'Upload photo'))
     
     # Start with app logic:
 if option == 'Prender camara':
@@ -32,5 +32,5 @@ if option == 'Prender camara':
         if cv2.waitKey(1) & 0xFF == ord("q") or stop_button_pressed:
             break
 
-cap.release()
-cv2.destroyAllWindows()
+    cap.release()
+    cv2.destroyAllWindows()
