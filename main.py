@@ -3,8 +3,6 @@ import streamlit as st
 import numpy as np
 import tempfile
 
-cap = cv2.VideoCapture(0)
-
 st.title("Prueba")
 
 frame_placeholder = st.empty()
@@ -17,7 +15,7 @@ option = st.selectbox(
     
     # Start with app logic:
 if option == 'Prender camara':
-
+    cap = cv2.VideoCapture(0)
     while cap.isOpened() and not stop_button_pressed:
         
         ret, frame = cap.read()
