@@ -20,7 +20,7 @@ stop_button_pressed = st.button("Stop")
 option = st.selectbox(
         'Selecciona tarea a realizar',
         ('None', 'Prender camara', 'Upload photo'))
-    
+
     # Start with app logic:
 if option == 'Prender camara':
     webrtc_streamer(key="key", video_processor_factory=VideoProcessor)
