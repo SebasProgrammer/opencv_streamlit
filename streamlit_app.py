@@ -1,4 +1,4 @@
-from streamlit_webrtc import webrtc_streamer, RTCConfiguration
+from streamlit_webrtc import webrtc_streamer, WebRtcMode
 import streamlit as st
 import av
 
@@ -7,5 +7,9 @@ def callback(frame: av.VideoFrame) -> av.VideoFrame:
     return av.VideoFrame.from_ndarray(img, format="bgr24")
 st.title("New APP")
 
-webrtc_streamer(key="key", video_frame_callback=callback)
+webrtc_streamer(key="key", 
+                
+                video_frame_callback=callback,
+                
+                )
 
